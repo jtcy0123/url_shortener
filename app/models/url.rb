@@ -1,5 +1,5 @@
 class Url < ApplicationRecord
-  before_create :shorten, :counter
+  before_create :shorten
   validates :long_url, :format => URI::regexp(%w(http https))
 
   def shorten
